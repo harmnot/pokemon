@@ -17,7 +17,7 @@ const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}
 
 mongoose
   .connect(uri, { useNewUrlParser: true, useCreateIndex: true })
-  .then(() => console.log(`======== CONNECTED VIA MONGO DB ========`))
+  .then(() => console.log(`========= CONNECTED VIA MONGO DB =========`))
   .catch(err => console.log(`got error => ${err}`));
 
 app.use(express.json());
