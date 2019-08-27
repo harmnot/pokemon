@@ -80,7 +80,7 @@ describe("PERSON SERVICE", () => {
 
     expect(getDetail).status(200);
     expect(getDetail.body.result).to.have.property("pokex");
-    expect(getDetail.body.result).to.have.property("emails");
+    expect(getDetail.body.result).to.have.property("email");
   });
 
   it("CAN'T FOUND USER TO SEARCH THE EMAIL", async () => {
