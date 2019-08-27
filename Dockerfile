@@ -21,9 +21,7 @@ RUN npm install
 EXPOSE 3000
 
 # Environment variables
-ENV NODE_ENV production
-ENV PORT 3000
-ENV PUBLIC_PATH "/"
+ENV PORT 4000
 
 # Main command
 CMD [ "npm", "run", "dev" ]

@@ -21,9 +21,7 @@ node {
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t pokemon --no-cache .'
-        sh 'docker tag pokemon http://35.186.145.25:4000/pokemon'
-        sh 'docker push http://35.186.145.25:4000/pokemon'
-        sh 'docker rmi -f pokemon http://35.186.145.25:4000/pokemon'
+        sh 'docker run -e DB_USERNAME=green -e DB_PASSWORD=yTOm8IvvAouNAiHf -e DB_NAME=pokemon pokemon'
       }
     }
   }
