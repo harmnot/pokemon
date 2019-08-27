@@ -4,7 +4,7 @@
   "description": "pokeapi.co",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "node app.js",
     "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --timeout 100000  --recursive --exit"
   },
   "keywords": [
