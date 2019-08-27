@@ -22,6 +22,9 @@ EXPOSE 3000
 
 # Environment variables
 ENV PORT 4000
+ENV DB_USERNAME green
+ENV DB_PASSWORD yTOm8IvvAouNAiHf
+ENV DB_NAME pokemon
 
 # Main command
 CMD [ "npm", "run", "dev" ]

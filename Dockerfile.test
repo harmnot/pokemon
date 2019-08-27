@@ -19,6 +19,9 @@ RUN npm install
 
 # Environment variables
 ENV NODE_ENV test
+ENV DB_USERNAME green
+ENV DB_PASSWORD yTOm8IvvAouNAiHf
+ENV DB_NAME pokemon
 
 # Main command
 CMD [ "npm", "test" ]
