@@ -18,7 +18,7 @@ COPY ./server/ /usr/src/app
 RUN npm install
 
 # Port to listener
-EXPOSE 4000
+EXPOSE 3000
 
 # Environment variables
 ENV PORT 4000
