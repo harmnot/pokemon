@@ -21,7 +21,7 @@ node {
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
       sh 'docker build -t pokemon/api-pokex --no-cache .'
-      sh 'docker run -d -p 4000:3000 -e DB_USERNAME=green -e DB_PASSWORD=yTOm8IvvAouNAiHf -e DB_NAME=pokemon --name api-pokex'
+      sh 'docker run -d -p 4000:3000 -e DB_USERNAME=green -e DB_PASSWORD=yTOm8IvvAouNAiHf -e DB_NAME=pokemon api-pokex'
       }
     }
   }
