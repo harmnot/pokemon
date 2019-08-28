@@ -21,7 +21,10 @@ node {
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t pokemon --no-cache .'
-        sh 'docker rm pokemon -f'
+        sh 'docker container stop pokemon'
+        sh 'docker rm pokemon || true'
+        sh 'docker container stop pokemon'
+        sh 'docker rm pokemon'
         sh 'docker run -d -p 4000:4000 -e DB_USERNAME=green -e DB_PASSWORD=yTOm8IvvAouNAiHf -e DB_NAME=pokemon pokemon'
       }
     }
