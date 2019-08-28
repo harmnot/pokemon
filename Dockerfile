@@ -1,5 +1,5 @@
 # Extending image
-FROM node:carbon
+FROM node:10-alpine
 
 RUN apt-get update
 RUN apt-get upgrade -y
