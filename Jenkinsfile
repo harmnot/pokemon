@@ -21,9 +21,9 @@ node {
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
       sh 'docker build -t pokemon --no-cache .'
-      sh 'docker tag pokemon http://35.186.145.25:5000/pokemon'
-      sh 'docker push http://35.186.145.25:5000/pokemon'
-      sh 'docker rmi -f pokemon http://35.186.145.25:5000/pokemon'
+      sh 'docker tag pokemon 35.186.145.25:5000/pokemon'
+      sh 'docker push 35.186.145.25:5000/pokemon'
+      sh 'docker rmi -f pokemon 35.186.145.25:5000/pokemon'
       }
     }
   }
