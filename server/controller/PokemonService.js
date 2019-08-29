@@ -59,6 +59,15 @@ class PokemonService {
       next(err);
     }
   }
+
+  static async findAllPokemon(req, res, next) {
+    try {
+      const getAll = await Pokemon.find({});
+      res.status(200).json({ result: getAll });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = PokemonService;

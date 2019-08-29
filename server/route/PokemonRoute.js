@@ -2,6 +2,7 @@ const express = require("express");
 const route = express.Router();
 const { PokemonService } = require("../controller/index.js");
 
+route.get("/", PokemonService.findAllPokemon);
 route.get("/:id", PokemonService.findOnePokemon);
 route.post("/createpokemons", PokemonService.getPokemons);
 

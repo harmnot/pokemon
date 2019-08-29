@@ -23,6 +23,7 @@ describe("POKEMON SERVICE", () => {
       .request(app)
       .post(`/api/pokemons/createpokemons`)
       .end((err, res) => {
+        console.log(err, "iniiiiiiiiiiiiiiiiii");
         expect(err).to.be.null;
         expect(res).to.have.status(201);
         id = res.body.result[0]._id;
@@ -55,6 +56,16 @@ describe("POKEMON SERVICE", () => {
       .get(`/api/pokemons/${id}2`)
       .end((err, res) => {
         expect(res).to.have.status(500);
+        done();
+      });
+  });
+
+  it("Get ALL POKEMON", done => {
+    chai
+      .request(app)
+      .get(`/api/pokemons`)
+      .end((err, res) => {
+        expect(res).to.have.status(200);
         done();
       });
   });
