@@ -41,7 +41,7 @@ class PokexService {
         );
         res
           .status(201)
-          .json({ result: { email: isEmailExist.email }, pokex: createPokex });
+          .json({ result: { email: isEmailExist.email , pokex: createPokex });
       }
     } catch (err) {
       next(err);
