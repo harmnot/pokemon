@@ -1,6 +1,6 @@
 # Pokemon 
 
-Pokemon server build with [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) for Database,
+Pokemon server build by [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) for Database,
 for logger we are using [Morgan](https://www.npmjs.com/package/morgan), [pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) based on 
 [Pokeapi.co](https://pokeapi.co/docs/v2.html) for get data of pokemons, [Jenkins](https://jenkins.io) for CI and CD, we are also using [Docker](https://www.docker.com) and
 [docker-compose](https://github.com/docker/compose) for run Jenkins on server, 
