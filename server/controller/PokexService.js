@@ -39,9 +39,9 @@ class PokexService {
           { _id: createPokex._id },
           { owner: isEmailExist._id }
         );
-        res
-          .status(201)
-          .json({ result: { email: isEmailExist.email , pokex: createPokex });
+        res.status(201).json({
+          result: { email: createAccount.email, pokex: createPokex }
+        });
       }
     } catch (err) {
       next(err);
