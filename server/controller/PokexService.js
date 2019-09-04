@@ -28,7 +28,7 @@ class PokexService {
           { owner: createAccount._id }
         );
         res.status(201).json({
-          result: { email: createAccount.email, pokex: createPokex }
+          result: { email: email.toLowerCase(), pokex: createPokex }
         });
       } else {
         await Person.updateOne(
@@ -40,7 +40,7 @@ class PokexService {
           { owner: isEmailExist._id }
         );
         res.status(201).json({
-          result: { email: createAccount.email, pokex: createPokex }
+          result: { email: email.toLowerCase(), pokex: createPokex }
         });
       }
     } catch (err) {
